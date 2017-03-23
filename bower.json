@@ -1,5 +1,6 @@
 {
   "name": "punchstarter",
   "dependencies": {
+    "showdown": "^1.6.4"
   }
 }

@@ -1,0 +1,21 @@
+<form {{action "save" on="submit"}}>
+  <p>
+    {{input type="text" placeholder="name" value=formValues.name}}
+  </p>
+  <p>
+    {{input type="text" placeholder="price" value=formValues.price}}
+  </p>
+  <p>
+    {{input type="text" placeholder="ships_to" value=formValues.ships_to}}
+  </p>
+  <p>
+    {{input type="text" placeholder="delivery_date" value=formValues.delivery_date}}
+  </p>
+  <p>
+    {{#textarea placeholder="description" value=formValues.description}}{{/textarea}}
+  </p>
+
+  <p>
+    <button>Submit</button>
+  </p>
+</form>

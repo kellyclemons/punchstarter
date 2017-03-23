@@ -1,0 +1,20 @@
+<form {{action "save" on="submit"}}>
+  <p>
+    {{input type="text" placeholder="name" value=formValues.name}}
+  </p>
+  <p>
+    {{input type="text" placeholder="country" value=formValues.country}}
+  </p>
+  <p>
+    {{input type="text" placeholder="video_url" value=formValues.video_url}}
+  </p>
+  <p>
+    {{#textarea placeholder="description" value=formValues.description}}{{/textarea}}
+  </p>
+  <p>
+    {{textarea placeholder="campaign" value=formValues.campaign}}
+  </p>
+  <p>
+    <button>Submit</button>
+  </p>
+</form>

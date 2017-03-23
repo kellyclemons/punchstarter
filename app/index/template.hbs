@@ -1,0 +1,15 @@
+<h2>HOMEPAGE</h2>
+
+{{log projects}}
+
+{{#each model as |project|}}
+  <div class="project-card">
+    <h3>{{project.name}}</h3>
+
+    <p>{{project.description}}</p>
+
+    <p>
+      {{#link-to "project.detail" project.id class="button"}}Read More{{/link-to}}
+    </p>
+  </div>
+{{/each}}

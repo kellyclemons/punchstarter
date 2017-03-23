@@ -2,6 +2,13 @@
 
 module.exports = function(environment) {
   var ENV = {
+    apiUrl: 'https://punchstarter-api.herokuapp.com/kellyclemons/basic',
+
+    DS: {
+      host: 'https://punchstarter-api.herokuapp.com',
+      namespace: 'kellyclemons',
+    },
+
     modulePrefix: 'punchstarter',
     environment: environment,
     rootURL: '/',

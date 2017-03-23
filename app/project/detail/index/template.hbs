@@ -1,0 +1,14 @@
+{{#link-to "project.detail.new-pledge"}}Create New Pledge Level{{/link-to}}
+
+{{log model}}
+
+{{#each model.pledgeLevels as |pledgeLevel|}}
+<li>
+  <h3>{{pledgeLevel.name}} - ${{pledgeLevel.price}}</h3>
+
+  <p>{{pledgeLevel.description}}</p>
+</li>
+
+
+  {{log pledgeLevel}}
+{{/each}}
