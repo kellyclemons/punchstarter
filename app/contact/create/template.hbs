@@ -1,0 +1,20 @@
+<form {{action "saveContact" on="submit"}}>
+  <p>
+    {{input type="text" value=formValues.firstName placeholder="First Name"}}
+  </p>
+  <p>
+    {{input type="text" value=formValues.lastName placeholder="Last Name"}}
+  </p>
+  <p>
+    {{input type="text" value=formValues.street placeholder="Street Address"}}
+  </p>
+  <p>
+    {{input type="text" value=formValues.phone placeholder="Phone Number"}}
+  </p>
+
+  <p>
+    {{#link-to "contact.index" class="button"}}Back{{/link-to}}
+    <button type="sumbit" name="button">Save Contact</button>
+  </p>
+
+</form>

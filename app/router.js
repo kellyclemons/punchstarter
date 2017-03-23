@@ -15,6 +15,10 @@ Router.map(function() {
       this.route('new-pledge');
     });
   });
+  this.route('contact', function() {
+    this.route('create');
+    this.route('edit');
+  });
 });
 
 export default Router;
