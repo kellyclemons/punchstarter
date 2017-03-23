@@ -1,5 +1,5 @@
 import Ember from 'ember';
-const apiUrl = 'https://punchstarter-api.herokuapp.com/kellyclemons/basic/projects';
+// const apiUrl = 'https://punchstarter-api.herokuapp.com/kellyclemons/basic/projects';
 
 export default Ember.Controller.extend({
   formValues: {
@@ -11,15 +11,14 @@ export default Ember.Controller.extend({
   },
 
   actions: {
-    save() {
-      fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', accept: 'application/json' },
-        body: JSON.stringify(this.formValues),
-      }).then(r => r.json())
-        .then((project) => {
+    submitForm() {
+      // Create a new project with our form values
+      const project = this.store.createRecord('project', this.formValues);
 
-        // Redirect
+      project.save().then((project) => {
+        // Clear form values
+        this.set('formValues', {});
+        // Redirect to index route
         this.transitionToRoute('project.detail', project.id);
       });
     },
